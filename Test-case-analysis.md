@@ -1,13 +1,13 @@
 # Assignment Submission
 
-## Project Selected: <Enter project name>
+## Project Selected: TodoMVC
 
 ## I. Introduction
 - Briefly introduce the purpose of this section, which is to provide a detailed description of two test cases in the selected open-source project.
 
-## II. Test Case 1: [Name of Test Case]
+## II. Test Case 1: [this.waitForVisibility]
 ### A. Description
-- Provide a concise overview of what this test case is designed to verify or validate within the project.
+- This test case is found in the 'test' folder and it titled 'page.js'. The objective of the tests in class is to test the functionality of the page. This includes  
 ### B. Gherkin Syntax (if applicable)
 - If you choose to use Gherkin syntax, write the Gherkin scenario for this test case.
 ### C. Test Steps
