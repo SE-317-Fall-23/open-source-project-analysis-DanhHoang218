@@ -3,7 +3,7 @@
 ## Project Selected: TodoMVC
 
 ## I. Introduction
-- Briefly introduce the purpose of this section, which is to provide a detailed description of two test cases in the selected open-source project.
+- The purpose of this section is to show our understanding with test cases and our ability to understand why each test case is important in retrospect to the software that the code is desgined for. It also gives us the chance to practice working with the gherkin format whcih is important because it allows us to simplify what the test is doing by breaking it into steps. For these test cases I chose one that tests what happens to a list if a user clicks the enter key to add items to it and a test that checks if the page is open. I chose these tests because one tests what happens when a user is interacting with the website while the other tests that state of the page and if it is opened or not.
 
 ## II. Test Case 1: [this.enterItem]
 ### A. Description
@@ -67,28 +67,43 @@ this.enterItem = function (itemText) {
         };
 ```
 ### E. Initial State
-- Describe the initial state or conditions of the system or component before executing the test.
+- The inital state of this test is for the user to be on the items page on the website. This is because the test is involved with if clicking enter will update the items stored in the item list. If the user is not on this page then the following actions would not be resulted. 
 ### F. Transition
-- Explain the actions or events that trigger a change in the system's state.
+- Some actions that will impact the state will be clicking the enter button to update the list and view the new item, the user picking the item they want to add to the item list because this will determine the name of the item and how the list will update. And if the user decides to remove and item the list should be able to adjust to that as well. 
 ### G. Expected State
-- Clearly outline the expected state or outcome after the test steps have been completed.
+-The expected result of this test case is when the user clicks enter to submit a new item it should add that item to the item list and it should the "New item" text should be that of the item that just got added to the list by the user.
 
-## III. Test Case 2: [Name of Test Case]
+## III. Test Case 2: [test.describe]
 ### A. Description
-- Provide a concise overview of the purpose of the second test case.
+- 
 ### B. Gherkin Syntax (if applicable)
-- If you choose to use Gherkin syntax, write the Gherkin scenario for this test case.
+- Feature: Initial Page Behavior
+
+- Scenario: Focusing on the todo input field
+
+- When the page is initially opened
+- 
+  Then the todo input field should be focused
+
 ### C. Test Steps
-- Enumerate the sequence of steps or actions involved in this test case.
+1. test.describe('When page is initally opened') checks if the page is already opened
+2. 
 ### D. Code Segments Under Test
 - Identify specific code segments or functions that are being tested in this case.
 ```Java
-// Enter code
+test.describe('When page is initially opened', function () {
+
+			test.it('should focus on the todo input field', function (done) {
+                    testOps.assertNewInputFocused()
+                    .then(function () { done(); });
+                    });
+
+                    });
 ```
 ### E. Initial State
-- Describe the initial state or conditions of the system or component before executing the test.
+- The inital state of this test case is for the page to be opened. Although this applies to a lot of test cases this test case focuses on if the page is opened.
 ### F. Transition
-- Explain the actions or events that trigger a change in the system's state.
+- What impacts the state of this test case is the state of the page whether it is opened or not. This is different from the previous test because it depended on the action of the user. This test case focuses on the current condition of the software. When the page is already open then it will check if the software will begin going through the other input fields.
 ### G. Expected State
 - Clearly outline the expected state or outcome after the test steps have been completed.
 
