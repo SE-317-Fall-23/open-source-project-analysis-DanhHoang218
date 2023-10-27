@@ -75,7 +75,7 @@ this.enterItem = function (itemText) {
 
 ## III. Test Case 2: [test.describe]
 ### A. Description
-- 
+- This test case focuses on checking if the software will begin inputting other input fields once it checks that the page is opened.
 ### B. Gherkin Syntax (if applicable)
 - Feature: Initial Page Behavior
 
@@ -87,7 +87,8 @@ this.enterItem = function (itemText) {
 
 ### C. Test Steps
 1. test.describe('When page is initally opened') checks if the page is already opened
-2. 
+2. If the page is opened it should be marked as done and then the code will focus on the other input fields
+3. Once it focuses the other input fields it will begin executing and adding those inputs into the page.
 ### D. Code Segments Under Test
 - Identify specific code segments or functions that are being tested in this case.
 ```Java
@@ -105,5 +106,5 @@ test.describe('When page is initially opened', function () {
 ### F. Transition
 - What impacts the state of this test case is the state of the page whether it is opened or not. This is different from the previous test because it depended on the action of the user. This test case focuses on the current condition of the software. When the page is already open then it will check if the software will begin going through the other input fields.
 ### G. Expected State
-- Clearly outline the expected state or outcome after the test steps have been completed.
+- Whats expected is that once the software recognizes that the page is opened it will begin to input the rest of the information onto the page as well as other input functions.
 
